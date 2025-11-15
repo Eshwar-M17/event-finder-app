@@ -1,16 +1,12 @@
 # event_finder_app
 
-A new Flutter project.
 
-## Getting Started
+## Architecture
 
-This project is a starting point for a Flutter application.
+This project uses the **MVVM (Model-View-ViewModel)** architecture, as recommended in the official Flutter documentation.
 
-A few resources to get you started if this is your first Flutter project:
+MVVM separates your app's business logic from the UI, making the codebase cleaner, easier to maintain, and more testable.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Model**: Handles data, logic, and state (from APIs, databases, or local storage like Hive).
+- **View**: The UI—widgets that display models and listen to the ViewModel.
+- **ViewModel**: Acts as a link between Model and View, exposes UI-ready data and commands, and handles state using Riverpod.
